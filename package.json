@@ -1,0 +1,31 @@
+{
+  "name": "py_startnew",
+  "version": "0.0.1",
+  "description": "Python project quick start ... automation, git, git hooks, pipenv, gulp, and custom efficiency options",
+  "main": "py_startnew.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skeptycal/py_startnew.git"
+  },
+  "keywords": [
+    "git",
+    "python",
+    "setup",
+    "bootstrap",
+    "script",
+    "macOS"
+  ],
+  "author": "Michael Treanor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skeptycal/py_startnew/issues"
+  },
+  "homepage": "https://github.com/skeptycal/py_startnew#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-vue": "^5.2.2"
+  }
+}
