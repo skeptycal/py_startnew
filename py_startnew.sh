@@ -71,6 +71,7 @@ curl -u 'USER' https://api.github.com/user/repos -d '{"name":"REPO"}'
 npm config ls -l >.npmrc
 npm init -y
 
+# Setup Travis CI - .travis.yml
 # Setup GitHub repo ; keep variable
 # Setup GIT submodule as needed ; keep variable
 # Add requirements_dev.txt
