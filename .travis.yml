@@ -1,1 +1,20 @@
-osx_image: xcode10.2
+language: python
+# dist: xenial # required for Python >= 3.7
+python:
+  - "2.7"
+  - "3.6"
+  - "3.7"
+  # - "nightly" # nightly build
+  # - "pypy3.5" # PyPy versions
+install:
+  - pip install -r requirements.txt # command to install dependencies
+  - pip install .
+# install:
+#   - pip install -q Django==$DJANGO_VERSION
+#   - python setup.py -q install
+# script:
+#   - pytest # command to run tests
+#   - make test # alternate test setup
+# env:
+#   - DJANGO_VERSION=1.10.8
+#   - DJANGO_VERSION=1.11.5

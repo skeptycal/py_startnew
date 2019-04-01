@@ -80,6 +80,9 @@ npx -p touch nodetouch gulpfile.js
 gulp --version
 
 # Setup Travis CI - .travis.yml
+
+# Setup Tox
+
 # Setup GitHub repo ; keep variable
 # Setup GIT submodule as needed ; keep variable
 # Add requirements_dev.txt
