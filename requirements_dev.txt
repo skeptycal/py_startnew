@@ -1,0 +1,9 @@
+-r requirements.txt
+coverage
+pipenv
+pylint
+flake8
+mock
+pytest
+yapf
+tox
