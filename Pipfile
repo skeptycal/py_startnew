@@ -4,17 +4,19 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-coverage = "*"
-pipenv = "*"
-pylint = "*"
-flake8 = "*"
-mock = "*"
-pytest "*"
 yapf = "*"
 tox = "*"
+mock = "*"
+flake8 = "*"
+coverage = "*"
 
 [packages]
 py_startnew = {editable = true,file = "file:///Volumes/Data/skeptycal/Documents/utilities/3_design/py_startnew"}
+requests = "*"
+setuptools = "*"
+twine = "*"
+pipenv = "*"
+
 
 [requires]
 python_version = "3.7"
