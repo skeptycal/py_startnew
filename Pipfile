@@ -5,12 +5,16 @@ verify_ssl = true
 
 [dev-packages]
 coverage = "*"
-pytest = "*"
-tox = "*"
+pipenv = "*"
+pylint = "*"
 flake8 = "*"
+mock = "*"
+pytest "*"
+yapf = "*"
+tox = "*"
 
 [packages]
-MyProject = {editable = true,file = "file:///Volumes/Data/skeptycal/Documents/utilities/3_design/py_startnew"}
+py_startnew = {editable = true,file = "file:///Volumes/Data/skeptycal/Documents/utilities/3_design/py_startnew"}
 
 [requires]
 python_version = "3.7"
