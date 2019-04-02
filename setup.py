@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Note: To use the 'upload' functionality of this file, you must:
-#   $ pip install twine
+#   pip install twine
 
 import io
 import os
@@ -12,17 +12,17 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'mypackage'
-DESCRIPTION = 'My short description for my project.'
-URL = 'https://github.com/me/myproject'
-EMAIL = 'me@example.com'
-AUTHOR = 'Awesome Soul'
+NAME = 'py_startnew'
+DESCRIPTION = 'Setup python development environment.'
+URL = 'https://github.com/skeptycal/py_startnew.git'
+EMAIL = 'skeptycal@gmail.com'
+AUTHOR = 'Michael Treanor'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = None
+VERSION = '0.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    # 'requests', 'maya', 'records',
+    'requests'#, 'maya', 'records',
 ]
 
 # What packages are optional?

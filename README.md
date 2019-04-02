@@ -2,7 +2,7 @@
 
 > Copyright (c) 2019 Michael Treanor
 >
-> [MIT License](https://opensource.org/licenses/MIT>)
+> [MIT License](https://opensource.org/licenses/MIT)
 
 ---
 
