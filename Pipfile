@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+coverage = "*"
+pytest = "*"
+tox = "*"
+flake8 = "*"
+
+[packages]
+MyProject = {editable = true,file = "file:///Volumes/Data/skeptycal/Documents/utilities/3_design/py_startnew"}
+
+[requires]
+python_version = "3.7"

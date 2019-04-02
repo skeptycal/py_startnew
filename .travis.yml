@@ -5,22 +5,9 @@ python:
   - "2.7"
   - "3.6"
   - "3.7"
-  # - "nightly" # nightly build # Travis CI website
-  # - "pypy3.5" # PyPy versions # Travis CI website
-# env:
-#   - DJANGO_VERSION=1.10.8
-#   - DJANGO_VERSION=1.11.5
-#   - FLASK=1.0.2 # flask-split example
-#   - FLASK=0.10.1 # flask-split example
 install:
   - pip install -r requirements.txt # command to install dependencies
   - pip install .
-  # - pip install -q Flask==$FLASK # flask-split example
-  # - pip install -q -r dev_requirements.txt # flask-split example
-  # - pip install -q -e . # flask-split example
-# install:
-#   - pip install -q Django==$DJANGO_VERSION
-#   - python setup.py -q install
 script:
   - pytest # command to run tests
   - make test # alternate test setup
