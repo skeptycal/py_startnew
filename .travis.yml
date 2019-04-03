@@ -1,8 +1,22 @@
+# Travis CI Environment Specifications
+# https://docs.travis-ci.com/user/reference/osx
+
+# Maven version
+# Stock Apache Maven 3.5.3
+
+# Python related tools #
+# pyenv (via homebrew)
+# virtualenv (via pip)
+# numpy (via pip)
+# scipy (via pip)
+# tox (via pip)
+
+os: osx
+osx_image: xcode10.2
 sudo: required
 language: python
 dist: xenial # required for Python >= 3.7 # Travis CI website
 python:
-  - "2.7"
   - "3.6"
   - "3.7"
 install:
@@ -10,5 +24,125 @@ install:
   - pip install .
 script:
   - pytest # command to run tests
-#  - make test # alternate test setup
-#  - python setup.py test # flask-split example
+  #  - make test # alternate test setup
+  #  - python setup.py test # flask-split example
+# Using macOS #
+# To use our macOS build infrastructure, add the following to your .travis.yml:
+
+# os: osx
+
+# Homebrew #
+# Homebrew is installed and updated every time the virtual machines are updated.
+
+# The Travis Homebrew addon is the simplest, fastest and most reliable way to install dependencies.
+
+# The Homebrew addon correctly handles up-to-date, outdated, and missing packages. Manual Homebrew dependency scripts are error-prone, and we recommend against using them.
+
+# The Homebrew addon uses the Homebrew database on the build image by default, but can be configured to run brew update if needed.
+
+# File System #
+# VMs running macOS use the default file system, HFS+. This file system is case-insensitive, and returns entities within a directory alphabetically.
+
+# Compilers and Build toolchain #
+# automake 1.16.1
+# maven 3.5.3
+# mercurial 4.6.1
+# pkg-config 0.29.2
+# wget 1.19.5
+# xctool 0.3.4
+# cmake 3.11.3
+
+# Languages #
+# go 1.10.3
+# Services #
+# postgis 2.4.4.4_1
+# postgresql 10.4
+# Runtimes #
+# Every worker has at least one version of Ruby, Java and Python to accommodate projects that may need one of those runtimes during the build.
+
+# Environment variables #
+# CI=true
+# TRAVIS=true
+# USER=travis
+# HOME=/Users/travis
+# Additionally, Travis CI sets environment variables you can use in your build, e.g. to tag the build, or to run post-build deployments.
+
+# TRAVIS_BRANCH:For builds not triggered by a pull request this is the name of the branch currently being built; whereas for builds triggered by a pull request this is the name of the branch targeted by the pull request (in many cases this will be master).
+
+# TRAVIS_BUILD_DIR: The absolute path to the directory where the repository being built has been copied on the worker.
+# TRAVIS_BUILD_ID: The id of the current build that Travis CI uses internally.
+# TRAVIS_BUILD_NUMBER: The number of the current build (for example, “4”).
+# TRAVIS_COMMIT: The commit that the current build is testing.
+# TRAVIS_COMMIT_RANGE: The range of commits that were included in the push or pull request. (Note that this is empty for builds triggered by the initial commit of a new branch.)
+# TRAVIS_JOB_ID: The id of the current job that Travis CI uses internally.
+# TRAVIS_JOB_NUMBER: The number of the current job (for example, “4.1”).
+# TRAVIS_PULL_REQUEST: The pull request number if the current job is a pull request, “false” if it’s not a pull request.
+# TRAVIS_SECURE_ENV_VARS: Whether or not secure environment vars are being used. This value is either “true” or “false”.
+# TRAVIS_REPO_SLUG: The slug (in form: owner_name/repo_name) of the repository currently being built. (for example, “travis-ci/travis-build”).
+# TRAVIS_OS_NAME: On multi-OS builds, this value indicates the platform the job is running on. Values are linux and osx currently, to be extended in the future.
+# # TRAVIS_TAG: If the current build is for a git tag, this variable is set to the tag’s name.
+
+# Maven version #
+# Stock Apache Maven 3.5.3
+
+# Xcode version #
+# Xcode 9.4.1 is installed with all available simulators and SDKs. Command Line Tools are also installed.
+
+# Xcode 10.2 #
+# Xcode 10.2 is available by adding osx_image: xcode10.2 to your .travis.yml.
+
+# Our Xcode 10.2 images have the following SDKs preinstalled:
+
+# macosx10.14
+# iphoneos12.2
+# iphonesimulator12.2
+# appletvos12.2
+# appletvsimulator12.2
+# watchos5.2
+# watchsimulator5.2
+# The Xcode 10.2 image also comes with the following simulators:
+
+# iOS 8.1
+# iOS 8.2
+# iOS 8.3
+# iOS 8.4
+# iOS 9.0
+# iOS 9.1
+# iOS 9.2
+# iOS 9.3
+# iOS 10.0
+# iOS 10.1
+# iOS 10.2
+# iOS 10.3
+# iOS 11.0
+# iOS 11.1
+# iOS 11.2
+# iOS 11.3
+# iOS 11.4
+# iOS 12.0
+# iOS 12.1
+# iOS 12.2
+# tvOS 9.0
+# tvOS 9.1
+# tvOS 9.2
+# tvOS 10.0
+# tvOS 10.1
+# tvOS 10.2
+# tvOS 11.0
+# tvOS 11.1
+# tvOS 11.2
+# tvOS 11.3
+# tvOS 11.4
+# tvOS 12.0
+# tvOS 12.1
+# tvOS 12.2
+# watchOS 2.0
+# watchOS 2.1
+# watchOS 2.2
+# watchOS 3.2
+# watchOS 4.0
+# watchOS 4.1
+# watchOS 4.2
+# watchOS 5.0
+# watchOS 5.1
+# watchOS 5.2
