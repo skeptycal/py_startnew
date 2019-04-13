@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+""" setup.py - Setup python development environment
+"""
 # Note: To use the 'upload' functionality of this file, you must:
 #   pip install twine
 
@@ -22,7 +23,7 @@ VERSION = '0.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
-    'requests'#, 'maya', 'records',
+    'requests'  # , 'maya', 'records',
 ]
 
 # What packages are optional?
@@ -50,7 +51,7 @@ about = {}
 if not VERSION:
     project_slug = NAME.lower().replace("-", "_").replace(" ", "_")
     with open(os.path.join(here, project_slug, '__version__.py')) as f:
-        exec(f.read(), about)
+        exec(f.read(), about)  # pylint: disable=exec-used
 else:
     about['__version__'] = VERSION
 
@@ -66,13 +67,13 @@ class UploadCommand(Command):
         """Prints things in bold."""
         print('\033[1m{0}\033[0m'.format(s))
 
-    def initialize_options(self):
+    def initialize_options(self):  # pylint: disable=missing-docstring
         pass
 
-    def finalize_options(self):
+    def finalize_options(self):  # pylint: disable=missing-docstring
         pass
 
-    def run(self):
+    def run(self):  # pylint: disable=missing-docstring
         try:
             self.status('Removing previous builds…')
             rmtree(os.path.join(here, 'dist'))
